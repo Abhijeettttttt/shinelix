@@ -4,7 +4,7 @@ const products = [
         id: 1,
         name: "Diamond Solitaire Ring",
         category: "rings",
-        price: 1299.99,
+        price: 99999.00,
         description: "Elegant 1-carat diamond solitaire ring in 14k white gold. Perfect for engagements and special occasions.",
         image: "placeholder",
         featured: true,
@@ -14,7 +14,7 @@ const products = [
         id: 2,
         name: "Pearl Necklace Classic",
         category: "necklaces",
-        price: 289.99,
+        price: 22999.00,
         description: "Timeless freshwater pearl necklace with sterling silver clasp. A classic piece for any jewelry collection.",
         image: "placeholder",
         featured: true,
@@ -24,7 +24,7 @@ const products = [
         id: 3,
         name: "Gold Hoop Earrings",
         category: "earrings",
-        price: 189.99,
+        price: 14999.00,
         description: "14k gold hoop earrings with a brushed finish. Lightweight and perfect for everyday wear.",
         image: "placeholder",
         featured: true,
@@ -34,7 +34,7 @@ const products = [
         id: 4,
         name: "Tennis Bracelet",
         category: "bracelets",
-        price: 899.99,
+        price: 69999.00,
         description: "Sparkling tennis bracelet with cubic zirconia stones in sterling silver setting.",
         image: "placeholder",
         featured: true,
@@ -44,7 +44,7 @@ const products = [
         id: 5,
         name: "Emerald Cocktail Ring",
         category: "rings",
-        price: 2199.99,
+        price: 175999.00,
         description: "Stunning 3-carat emerald cocktail ring surrounded by diamonds in 18k yellow gold.",
         image: "placeholder",
         featured: false,
@@ -54,7 +54,7 @@ const products = [
         id: 6,
         name: "Statement Necklace",
         category: "necklaces",
-        price: 459.99,
+        price: 35999.00,
         description: "Bold statement necklace with mixed gemstones and gold-plated chain.",
         image: "placeholder",
         featured: false,
@@ -64,7 +64,7 @@ const products = [
         id: 7,
         name: "Diamond Stud Earrings",
         category: "earrings",
-        price: 799.99,
+        price: 62999.00,
         description: "Classic diamond stud earrings, 0.5 carat each, in 14k white gold settings.",
         image: "placeholder",
         featured: false,
@@ -74,7 +74,7 @@ const products = [
         id: 8,
         name: "Charm Bracelet",
         category: "bracelets",
-        price: 149.99,
+        price: 11999.00,
         description: "Sterling silver charm bracelet with heart charm. Add your own charms to personalize.",
         image: "placeholder",
         featured: false,
@@ -84,7 +84,7 @@ const products = [
         id: 9,
         name: "Sapphire Pendant",
         category: "necklaces",
-        price: 679.99,
+        price: 52999.00,
         description: "Beautiful blue sapphire pendant with diamond accents on a delicate gold chain.",
         image: "placeholder",
         featured: false,
@@ -94,7 +94,7 @@ const products = [
         id: 10,
         name: "Wedding Band Set",
         category: "rings",
-        price: 599.99,
+        price: 47999.00,
         description: "Matching wedding band set in 14k rose gold with subtle diamond details.",
         image: "placeholder",
         featured: false,
@@ -104,7 +104,7 @@ const products = [
         id: 11,
         name: "Vintage Brooch",
         category: "other",
-        price: 199.99,
+        price: 15999.00,
         description: "Vintage-inspired brooch with intricate filigree work and pearl center.",
         image: "placeholder",
         featured: false,
@@ -114,7 +114,7 @@ const products = [
         id: 12,
         name: "Chain Bracelet",
         category: "bracelets",
-        price: 229.99,
+        price: 18999.00,
         description: "Delicate chain bracelet in 14k gold with adjustable length closure.",
         image: "placeholder",
         featured: false,
@@ -133,7 +133,7 @@ function createProductCard(product) {
             <div class="product-info">
                 <h3>${product.name}</h3>
                 <p>${product.description.substring(0, 80)}...</p>
-                <div class="product-price">$${product.price.toFixed(2)}</div>
+                <div class="product-price">₹${product.price.toLocaleString('en-IN')}</div>
                 <button class="add-to-cart" onclick="addToCart(${product.id})">
                     Add to Cart
                 </button>
@@ -228,7 +228,7 @@ function openProductModal(productId) {
             </div>
             <div class="product-modal-info">
                 <h2>${product.name}</h2>
-                <div class="product-modal-price">$${product.price.toFixed(2)}</div>
+                <div class="product-modal-price">₹${product.price.toLocaleString('en-IN')}</div>
                 <div class="product-modal-description">
                     <p>${product.description}</p>
                     <p><strong>Category:</strong> ${product.category.charAt(0).toUpperCase() + product.category.slice(1)}</p>

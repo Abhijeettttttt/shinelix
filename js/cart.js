@@ -102,7 +102,7 @@ function updateCartDisplay() {
                 <p style="font-size: 0.9rem; color: #666;">Add some beautiful jewelry to get started!</p>
             </div>
         `;
-        cartTotalElement.textContent = '0.00';
+        cartTotalElement.textContent = '₹0';
         return;
     }
     
@@ -118,7 +118,7 @@ function updateCartDisplay() {
                     </div>
                     <div class="cart-item-details">
                         <h4>${product.name}</h4>
-                        <div class="cart-item-price">$${product.price.toFixed(2)}</div>
+                        <div class="cart-item-price">₹${product.price.toLocaleString('en-IN')}</div>
                         <div class="quantity-controls">
                             <button onclick="updateCartQuantity(${product.id}, ${item.quantity - 1})">-</button>
                             <span>${item.quantity}</span>
@@ -134,7 +134,7 @@ function updateCartDisplay() {
     });
     
     cartItemsContainer.innerHTML = cartHTML;
-    cartTotalElement.textContent = getCartTotal().toFixed(2);
+    cartTotalElement.textContent = '₹' + getCartTotal().toLocaleString('en-IN');
 }
 
 // Function to toggle cart sidebar

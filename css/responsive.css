@@ -1,4 +1,10 @@
 /* Responsive Design */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none !important;
+    }
+}
+
 @media (max-width: 1024px) {
     .container {
         padding: 0 15px;
