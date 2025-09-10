@@ -213,7 +213,7 @@ function checkout() {
     const confirmed = confirm(
         `Ready to checkout?\n\n` +
         `Items: ${itemCount}\n` +
-        `Total: $${total.toFixed(2)}\n\n` +
+        `Total: ₹${total.toLocaleString('en-IN')}\n\n` +
         `This is a demo - no actual payment will be processed.`
     );
     
