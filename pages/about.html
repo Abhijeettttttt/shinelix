@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Shinelix Jewelry</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1><a href="../index.html">Shinelix</a></h1>
+                    <span>Premium Jewelry</span>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Shinelix</h1>
+            <p>Crafting excellence since 1975</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>For over five decades, Shinelix has been synonymous with exceptional craftsmanship and timeless elegance. Founded in 1975 by master jeweler Maria Shinelix, our brand has been dedicated to creating pieces that tell stories, celebrate moments, and become treasured heirlooms.</p>
+                    
+                    <p>Every piece in our collection is meticulously handcrafted by skilled artisans who share our passion for perfection. We source only the finest materials - from ethically mined diamonds to lustrous pearls and precious metals - ensuring that each creation meets our exacting standards.</p>
+                    
+                    <h3>Our Mission</h3>
+                    <p>To create jewelry that transcends trends and becomes part of your personal story. We believe that true luxury lies not just in the materials we use, but in the emotions our pieces evoke and the memories they help create.</p>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-store"></i>
+                        <p>Jewelry Workshop Image</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values">
+        <div class="container">
+            <h2>Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Quality</h3>
+                    <p>We never compromise on quality. Every piece undergoes rigorous quality checks to ensure it meets our exceptional standards.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Sustainability</h3>
+                    <p>We are committed to ethical sourcing and sustainable practices in all aspects of our business.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Craftsmanship</h3>
+                    <p>Our master artisans bring decades of experience and passion to every piece they create.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Excellence</h3>
+                    <p>We strive for perfection in every detail, from design conception to final polish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Maria Shinelix</h3>
+                    <p>Founder & Master Jeweler</p>
+                    <p>With over 50 years of experience, Maria's vision and expertise continue to guide our brand.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>David Chen</h3>
+                    <p>Head Designer</p>
+                    <p>David brings contemporary flair to our classic designs, creating pieces that speak to modern sensibilities.</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Sarah Johnson</h3>
+                    <p>Quality Assurance Manager</p>
+                    <p>Sarah ensures every piece meets our exacting standards before it reaches our customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be loaded dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: $<span id="cart-total">0.00</span></strong>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shinelix</h3>
+                    <p>Premium jewelry crafted with passion and precision for over 50 years.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
